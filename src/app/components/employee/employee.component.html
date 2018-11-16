@@ -1,0 +1,54 @@
+<div class="container">
+  <h3>Employee Table</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Sr. No</th>
+        <th>Id</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+        <th>Employee Age</th>
+        <th>Profile Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor = "let emp of employeeList; let i = index"> -->
+      <tr *ngFor="let emp of employeeList | paginate: { itemsPerPage: 10, currentPage: p}; let i = index">
+        <td>
+          <a routerLink = "/editEmployee/{{emp.id}}">{{i+1}}</a>
+        </td>
+        <td>{{emp.id}}</td>
+        <td>{{emp.employee_name}}</td>
+        <td>{{emp.employee_salary}}</td>
+        <td>{{emp.employee_age}}</td>
+        <td>{{emp.profile_image}}</td>
+      </tr> 
+    </tbody>
+    <!-- <tfoot>
+        <pagination [totalItems]="66" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+    </tfoot> -->
+  </table>
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-4">
+      <div>
+
+      </div>
+      <div>
+          <pagination [totalItems]="66" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+      </div>
+      <div>
+        
+      </div>
+        
+    </div>
+</div> -->
+
+<div>
+    <div class="row">
+      <div class="col-md-12">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+</div>

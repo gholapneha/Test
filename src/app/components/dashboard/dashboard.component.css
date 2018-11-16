@@ -1,0 +1,17 @@
+body { 
+    padding-top:30px; 
+    background-color: black;
+   
+}
+.container {
+    background-image: url('../../../assets/images/nature/images4.jpg');
+}
+
+.col-md-6 {
+    margin: 25px 150px 65px 200px;
+}
+.panel-body .btn:not(.btn-block) { 
+    width:120px;
+    margin-right:7px;
+    margin-bottom:10px; 
+}

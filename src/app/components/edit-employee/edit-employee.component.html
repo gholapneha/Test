@@ -1,0 +1,23 @@
+<div class="container"> 
+  <h2>Edit Employee</h2>
+  <div class="roe">
+    <div class="col-md-12">
+      <form [formGroup]="employeeForm" (ngSubmit)= "SaveData()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" formControlName = 'name'>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" class="form-control" id="age" formControlName = 'age'>
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary</label>
+          <input type="text" class="form-control" id="salary" formControlName = 'salary'>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-danger" (click) = "Delete()">Delete</button>
+      </form>
+    </div>
+  </div>
+</div>
